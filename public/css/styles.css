@@ -1,0 +1,31 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+
+.bg-yellow {
+  background-color: #eac926;
+}
+
+.bg-gray {
+  background-color: #ebebeb;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.p-1 {
+  padding: 8px;
+}
+
+.boton {
+  background-color: rgb(28, 28, 197);
+  padding: 1%;
+  border-radius: 25%;
+}
