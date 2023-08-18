@@ -1,8 +1,3 @@
-* {
-  padding: 0;
-  margin: 0;
-}
-
 body {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
@@ -12,20 +7,102 @@ body {
   background-color: #eac926;
 }
 
+.color-gray {
+  color: #ebebeb;
+}
+
 .bg-gray {
   background-color: #ebebeb;
+}
+
+.bg-darkgray {
+  background-color: #666;
+}
+
+.bg-blue {
+  background-color: rgb(28, 28, 197);
+}
+
+.color-lightblue {
+  background-color: #1259c3;
+}
+
+.color-green {
+  background-color: #39b54a;
+}
+
+.font-texts {
+  font-size: 12px;
+}
+
+.font-titles {
+  font-size: 24px;
+}
+
+.font-prices {
+  font-size: 18px;
+}
+
+.font-discounts {
+  font-size: 16px;
+}
+
+.font-descriptions {
+  font-size: 16px;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .w-50 {
   width: 50%;
 }
 
+.w-100 {
+  width: 100%;
+}
+
 .p-1 {
   padding: 8px;
 }
 
-.boton {
-  background-color: rgb(28, 28, 197);
+.mgy-s {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.mgy-m {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.mgx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mgr-1 {
+  margin-right: 8px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.font-em {
+  font-size: 2em;
+}
+
+.burger-menu {
   padding: 1%;
   border-radius: 25%;
+}
+
+@media (min-width: 768px) {
+  /* tablet */
 }
