@@ -136,7 +136,7 @@ nav ul li a {
   width: 100%;
 }
 
-.product-descr {
+.product-descr-container {
   padding: 8px;
   border-top: 1px solid;
   border-color: #ebebeb;
@@ -156,14 +156,21 @@ nav ul li a {
   top: -15px;
 }
 
+.product-descr {
+  width: 100%;
+  display: flex;
+}
+
 .product-price {
   font-size: 18px;
   margin-right: 8px;
+  flex-grow: 3;
 }
 
 .product-disc {
   color: #39b54a;
   font-size: 16px;
+  flex-grow: 7;
 }
 
 .product-title {
