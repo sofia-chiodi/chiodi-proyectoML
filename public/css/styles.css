@@ -91,24 +91,12 @@ nav ul li a {
   width: 100%;
 }
 
-/* MAIN */
+/* HOME */
 .main-home {
   width: 90vw;
   padding: 8px;
   margin: auto;
 }
-.main-register {
-  width: 90vw;
-  padding: 8px;
-  margin: auto;
-}
-.main-login {
-  width: 90vw;
-  padding: 8px;
-  margin: auto;
-}
-
-/* HOME */
 
 .product-section {
   padding: 8px;
@@ -178,11 +166,53 @@ nav ul li a {
   font-size: 18px;
 }
 
+/* LOGIN */
+.main-login {
+  width: 90vw;
+  padding: 8px;
+  margin: auto;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  background: none;
+  margin: auto;
+}
+
+.login-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5vw;
+  border-radius: 10px;
+  border: 1px solid rgba (0, 0, 0, 0.1);
+}
+
+.login-title {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.login-submit-container {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
 /* REGISTER */
+.main-register {
+  width: 90vw;
+  padding: 8px;
+  margin: auto;
+}
+
 .register-form {
   display: flex;
   flex-direction: column;
   background: none;
+  margin: auto;
 }
 
 .register-details-container {
@@ -196,7 +226,11 @@ nav ul li a {
 
 .register-title {
   font-size: 24px;
-  margin-top: 10px;
+  margin-top: 20px;
+}
+
+.register-upload {
+  font-size: 16px;
 }
 
 .register-info-input {
@@ -243,6 +277,7 @@ nav ul li a {
   background-color: #1259c3;
   color: white;
   font-size: 16px;
+  font-weight: bold;
   border-radius: 5px;
   width: 120px;
   border: none;
@@ -254,6 +289,7 @@ nav ul li a {
   background-color: #1259c3;
   color: white;
   font-size: 16px;
+  font-weight: bold;
   border-radius: 5px;
   width: 120px;
   border: none;
@@ -264,22 +300,6 @@ nav ul li a {
 .register-buttons-container {
   width: 100%;
   margin-top: 10px;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-/* LOGIN */
-
-.login-title {
-  font-size: 24px;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-bottom: 20px;
-}
-
-.login-submit-container {
-  width: 100%;
-  margin-top: 20px;
   display: flex;
   justify-content: space-evenly;
 }
@@ -365,9 +385,15 @@ nav ul li a {
   .basic-info-input {
     padding: 10px;
   }
+  .register-form {
+    width: 90%;
+  }
+  .register-title {
+    margin-top: 30px;
+  }
 }
 
-@media (min-width: 769px) and (max-width: 1023px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   /* LAPTOP */
 
   /* home */
@@ -395,15 +421,60 @@ nav ul li a {
     width: 23%;
   }
 
+  /* login */
+  .login-form {
+    width: 90%;
+  }
+  .login-title {
+    margin-top: 40px;
+    font-size: 30px;
+  }
+  .login-container {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .register-submit {
+    font-size: 18px;
+  }
+  .register-reset {
+    font-size: 18px;
+  }
+
+  /* register */
+  .register-form {
+    width: 90%;
+  }
+  .basic-info-input {
+    padding: 10px;
+  }
+  .register-title {
+    margin-top: 40px;
+    font-size: 30px;
+  }
+  .register-subtitle {
+    font-size: 22px;
+  }
+  .register-user-container {
+    font-size: 18px;
+  }
+  .register-interests-container {
+    font-size: 18px;
+  }
+  .register-submit {
+    font-size: 18px;
+  }
+  .register-reset {
+    font-size: 18px;
+  }
+
   /* footer */
   .footer-terms {
     font-size: 18px;
   }
 }
 
-/* DESKTOP */
-@media (min-width: 1024px) {
-  /* HOME */
+@media (min-width: 1025px) {
+  /* DESKTOP */
 
   /* nav*/
   .nav-ul-sites {
@@ -424,24 +495,45 @@ nav ul li a {
     display: none;
   }
 
-  /* main */
+  /* home */
   .product-card {
     width: 23%;
   }
 
-  /* REGISTER */
+  /* login */
+  .login-title {
+    font-size: 30px;
+  }
+  .login-form {
+    width: 75%;
+  }
 
+  /* register */
+  .basic-info-input {
+    padding: 10px;
+  }
+  .register-form {
+    width: 75%;
+  }
   .register-title {
     font-size: 30px;
   }
   .register-subtitle {
     font-size: 20px;
   }
-
-  /* LOGIN */
-
-  .login-title {
-    font-size: 30px;
+  .register-user-container {
+    font-size: 20px;
+  }
+  .register-interests-container {
+    font-size: 20px;
+  }
+  .register-submit {
+    font-size: 20px;
+    width: 150px;
+  }
+  .register-reset {
+    font-size: 20px;
+    width: 150px;
   }
 
   /* footer */
