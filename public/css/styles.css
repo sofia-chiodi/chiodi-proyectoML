@@ -98,17 +98,9 @@ nav ul li a {
   margin: auto;
 }
 
-.product-section {
-  padding: 8px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
 .product-section-title {
-  width: 100%;
-  padding: 8px;
   font-size: 24px;
+  margin: 20px 0 20px 0;
 }
 
 .product-card {
@@ -305,8 +297,12 @@ nav ul li a {
 }
 
 /* FOOTER */
+footer {
+  background-color: white;
+  margin-top: 20px ;
+}
 .footer-container {
-  padding: 8px;
+  padding: 8px; 
 }
 .footer-texts {
   text-align: center;
@@ -338,7 +334,7 @@ nav ul li a {
   font-size: 2em;
 }
 
-@media (min-width: 637px) and (max-width: 768px) {
+@media (min-width: 768px) {
   /* TABLET */
 
   /* home */
@@ -371,14 +367,17 @@ nav ul li a {
   .product-shadow {
     box-shadow: none;
   }
-  .main-home {
-    flex-direction: row;
-  }
   .product-section {
-    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  .product-section-title{
+    width: 100%;
   }
   .product-card {
-    width: 40%;
+    width: 48%;
   }
 
   /* register */
@@ -393,7 +392,7 @@ nav ul li a {
   }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 1024px) {
   /* LAPTOP */
 
   /* home */
@@ -413,12 +412,14 @@ nav ul li a {
   nav ul li {
     margin-right: 3%;
   }
-
   .burger-menu-container {
     display: none;
   }
   .product-card {
     width: 23%;
+  }
+  .product-descr:hover {
+    display: none;
   }
 
   /* login */

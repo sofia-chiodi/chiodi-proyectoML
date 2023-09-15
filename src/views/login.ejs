@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <%- include('./partials/header.ejs') %>
+
+    <img
+      class="banner-img"
+      src="/images/img-home-banner.jpg"
+      alt="Promoción fiestas"
+    />
+
+    <main class="main-login">
+      <form action="/" class="login-form">
+        <div class="login-container">
+          <h2 class="login-title">Ingresá a tu usuario</h2>
+          <input
+            class="register-info-input"
+            type="text"
+            name="username"
+            placeholder="Nombre de usuario"
+            minlength="8"
+          />
+          <input
+            class="register-info-input"
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Contraseña"
+            minlength="8"
+          />
+        </div>
+        <div class="login-submit-container">
+          <a href="/"><input class="register-submit" type="submit" /></a>
+        </div>
+      </form>
+    </main>
+
+    <%- include('./partials/footer.ejs') %>
+  </body>
+</html>

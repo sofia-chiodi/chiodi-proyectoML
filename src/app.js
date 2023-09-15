@@ -1,30 +1,20 @@
-const express = require("express");
-const path = require("path");
+const express = require('express');
+const path = require('path');
 
-const app = express(); // lo ejecutamos para obtener un obj con metodos
+const mainRoutes = require('./routes/mainRoutes.js');
+const usersRoutes = require('./routes/usersRoutes.js');
 
-app.use(express.static(path.join(__dirname, "../public"))); // archivos estaticos que se pueden usar en cualquier lado. Se le da acceso a toda la carpeta de una
+const app = express();
 
-// const PORT = 3000;
+app.use(express.static(path.join(__dirname, '../public')));
 
-// app.listen(PORT, () => {
-//   console.log(`Se prendio en el puerto ${PORT}`);
-// });
-
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3013;
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo en el puerto ${PORT}`);
+  console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
 
-app.get("/", (req, res) => {
-  //ruta parametro 1, callback que se ejecutara al obtener la ruta (parametro 2)
-  res.sendFile(path.join(__dirname, "views/home.html"));
-});
-app.get("/login.html", (req, res) => {
-  //ruta parametro 1, callback que se ejecutara al obtener la ruta (parametro 2)
-  res.sendFile(path.join(__dirname, "views/login.html"));
-});
-app.get("/register.html", (req, res) => {
-  //ruta parametro 1, callback que se ejecutara al obtener la ruta (parametro 2)
-  res.sendFile(path.join(__dirname, "views/register.html"));
-});
+app.set('view engine', 'ejs');
+app.set('views', __dirname + '/views');
+
+app.use('/', mainRoutes);
+app.use('/users', usersRoutes);
