@@ -8,14 +8,14 @@
     <main class="main-register">
       <form action="/" class="register-form">
         <div class="register-details-container">
-          <h2 class="register-title">Formulario de registro</h2>
-          <input type="text" class="register-info-input" name="name" placeholder="Nombre y apellido" minlength="8" />
-          <input type="text" class="register-info-input" name="username" placeholder="Nombre de usuario" minlength="8"/>
-          <input type="email" class="register-info-input" name="email" placeholder="E-mail"/>
+          <h2 class="register-title">Registrate</h2>
+          <input type="text" class="form-info-input" name="name" placeholder="Nombre y apellido" minlength="8" />
+          <input type="text" class="form-info-input" name="username" placeholder="Nombre de usuario" minlength="8"/>
+          <input type="email" class="form-info-input" name="email" placeholder="E-mail"/>
           <h3 class="register-subtitle">Fecha de nacimiento</h3>
         <div class="register-details-container">
-          <input type="date" class="register-info-input" name="birthday" />
-          <input type="text" class="register-info-input" name="address" placeholder="Domicilio" minlength="8"/>
+          <input type="date" class="form-info-input" name="birthday"/>
+          <input type="text" class="form-info-input" name="address" placeholder="Domicilio" minlength="8"/>
         </div>
         <h3 class="register-subtitle">Perfil de usuario</h3>
         <div class="register-user-container">
@@ -51,16 +51,22 @@
             Vida sana
           </label>
         </div>
-        <h3 class="register-subtitle">Foto de usuario</h3>
-        <input type="file" name="fileToUpload" id="fileToUpload" class="register-upload">
-        <h3 class="register-subtitle">Contraseña</h3>
-        <input class="register-info-input" type="password" name="password" id="password" placeholder="Contraseña" minlength="8">
-        <h3 class="register-subtitle">Confirmar contraseña</h3>
-        <input class="register-info-input" type="password" name="password" id="password" placeholder="Confirmar contraseña" minlength="8">
+        
+        <section class="register-section">
+          <h3 class="register-subtitle">Foto de perfil</h3>
+          <input type="file" name="fileToUpload" id="fileToUpload" class="register-upload">
+        </section>
+        
+        <section class="register-section">
+          <h3 class="register-subtitle">Contraseña</h3>
+          <input class="form-info-input" type="password" name="password" id="password" placeholder="Contraseña" minlength="8">
+          <h3 class="register-subtitle">Confirmar contraseña</h3>
+          <input class="form-info-input" type="password" name="password" id="password" placeholder="Confirmar contraseña" minlength="8">
+        </section>
 
         <div class="register-buttons-container">
-          <a href="/"><input class="register-submit" type="submit"></a>
-          <input type="reset" class="register-reset" name="reset">  
+          <a href="/"><input class="form-submit" type="submit"></a>
+          <input type="reset" class="form-submit" name="reset" value="Restablecer">  
         </div>
         
 

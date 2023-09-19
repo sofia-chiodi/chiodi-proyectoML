@@ -1,5 +1,4 @@
 body {
-  font-family: "Roboto", sans-serif;
   font-size: 12px;
   background-color: #ebebeb;
 }
@@ -177,7 +176,6 @@ nav ul li a {
   display: flex;
   flex-direction: column;
   gap: 5vw;
-  border-radius: 10px;
   border: 1px solid rgba (0, 0, 0, 0.1);
 }
 
@@ -211,7 +209,7 @@ nav ul li a {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 5vw;
+  gap: 4vw;
   border-radius: 10px;
   border: 1px solid rgba (0, 0, 0, 0.1);
 }
@@ -225,9 +223,12 @@ nav ul li a {
   font-size: 16px;
 }
 
-.register-info-input {
+.form-info-input {
   border: none;
   padding: 8px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 16px;
 }
 
 .register-subtitle {
@@ -265,7 +266,13 @@ nav ul li a {
   margin-right: 15px;
 }
 
-.register-submit {
+.register-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4vw;
+}
+
+.form-submit {
   background-color: #1259c3;
   color: white;
   font-size: 16px;
@@ -299,10 +306,10 @@ nav ul li a {
 /* FOOTER */
 footer {
   background-color: white;
-  margin-top: 20px ;
+  margin-top: 20px;
 }
 .footer-container {
-  padding: 8px; 
+  padding: 8px;
 }
 .footer-texts {
   text-align: center;
@@ -373,11 +380,16 @@ footer {
     gap: 10px;
     justify-content: space-between;
   }
-  .product-section-title{
+  .product-section-title {
     width: 100%;
   }
   .product-card {
     width: 48%;
+  }
+
+  /* login */
+  .login-form {
+    width: 70%;
   }
 
   /* register */
@@ -385,7 +397,7 @@ footer {
     padding: 10px;
   }
   .register-form {
-    width: 90%;
+    width: 70%;
   }
   .register-title {
     margin-top: 30px;
@@ -424,7 +436,7 @@ footer {
 
   /* login */
   .login-form {
-    width: 90%;
+    width: 50%;
   }
   .login-title {
     margin-top: 40px;
@@ -443,7 +455,7 @@ footer {
 
   /* register */
   .register-form {
-    width: 90%;
+    width: 50%;
   }
   .basic-info-input {
     padding: 10px;
@@ -506,7 +518,7 @@ footer {
     font-size: 30px;
   }
   .login-form {
-    width: 75%;
+    width: 50%;
   }
 
   /* register */
@@ -514,7 +526,7 @@ footer {
     padding: 10px;
   }
   .register-form {
-    width: 75%;
+    width: 50%;
   }
   .register-title {
     font-size: 30px;
