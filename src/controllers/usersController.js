@@ -1,9 +1,15 @@
 const usersController = {
-  login: (req, res) => {
+  loginForm: (req, res) => {
     return res.render('login');
   },
-  register: (req, res) => {
+  login: (req, res) => {
+    return res.redirect('/');
+  },
+  registerForm: (req, res) => {
     return res.render('register');
+  },
+  register: (req, res) => {
+    return res.redirect('login');
   },
 };
 

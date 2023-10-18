@@ -1,76 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
-  <%- include('./partials/head') %>
+  <head>
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="/css/register.css" />
+  </head>  
+  
   <body>
     <%- include('./partials/header') %>
-    <img class="banner-img" src="/images/img-home-banner.jpg" alt="Promoción fiestas" />
 
-    <main class="main-register">
-      <form action="/" class="register-form">
-        <div class="register-details-container">
-          <h2 class="register-title">Registrate</h2>
-          <input type="text" class="form-info-input" name="name" placeholder="Nombre y apellido" minlength="8" />
-          <input type="text" class="form-info-input" name="username" placeholder="Nombre de usuario" minlength="8"/>
-          <input type="email" class="form-info-input" name="email" placeholder="E-mail"/>
-          <h3 class="register-subtitle">Fecha de nacimiento</h3>
-        <div class="register-details-container">
-          <input type="date" class="form-info-input" name="birthday"/>
-          <input type="text" class="form-info-input" name="address" placeholder="Domicilio" minlength="8"/>
-        </div>
-        <h3 class="register-subtitle">Perfil de usuario</h3>
-        <div class="register-user-container">
-          <label for="register-comprador-button">
-            <input class="register-comprador-button" type="radio" name="user" id="register-comprador-button"/> 
-            Comprador
-          </label>
-          <label for="register-vendedor-button">
-            <input type="radio" name="user" id="register-vendedor-button"/> 
-            Vendedor
-          </label>
-        </div>
-        <h3 class="register-subtitle">Intereses</h3>
-        <div class="register-interests-container">
-          <label for="register-interests-electro">
-            <input class="register-interests-input" type="checkbox" name="Intereses" id="register-interests-electro" /> 
-            Electro
-          </label>
-          <label for="register-interests-moda">
-            <input class="register-interests-input" type="checkbox" name="Intereses" id="register-interests-moda" /> 
-            Moda
-          </label>
-          <label for="register-interests-hogar">
-            <input class="register-interests-input" type="checkbox" name="Intereses" id="register-interests-hogar" /> 
-            Hogar
-          </label>
-          <label for="register-interests-jugueteria">
-            <input class="register-interests-input" type="checkbox" name="Intereses" id="register-interests-jugueteria" /> 
-            Juguetería
-          </label>
-          <label for="register-interests-vida">
-            <input class="register-interests-input" type="checkbox" name="Intereses" id="register-interests-vida" /> 
-            Vida sana
-          </label>
-        </div>
-        
-        <section class="register-section">
-          <h3 class="register-subtitle">Foto de perfil</h3>
-          <input type="file" name="fileToUpload" id="fileToUpload" class="register-upload">
-        </section>
-        
-        <section class="register-section">
-          <h3 class="register-subtitle">Contraseña</h3>
-          <input class="form-info-input" type="password" name="password" id="password" placeholder="Contraseña" minlength="8">
-          <h3 class="register-subtitle">Confirmar contraseña</h3>
-          <input class="form-info-input" type="password" name="password" id="password" placeholder="Confirmar contraseña" minlength="8">
-        </section>
+    <main>
+      
+      <section class="register-container">
+        <article class="register-title">
+          <h2>Registrate</h2>
+        </article>
 
-        <div class="register-buttons-container">
-          <a href="/"><input class="form-submit" type="submit"></a>
-          <input type="reset" class="form-submit" name="reset" value="Restablecer">  
-        </div>
-        
+        <article class="form-container">
+          <form action="/users/register" method="post">
 
-      </form>
+              <h3 class="register-subtitle">Datos personales</h3>
+              
+              <input type="text" name="name" placeholder="Nombre completo"/>
+              
+              <input type="email" name="email" placeholder="E-mail"/>
+
+              <input type="text" name="address" placeholder="Domicilio" minlength="8"/>
+
+              <label for="birthDate">Fecha de nacimiento</label>
+              <input type="date" name="birthDate"/>
+
+              
+              <div class="register-details-container">
+              
+              
+            <h3 class="register-subtitle">Perfil de usuario</h3>
+            
+              <label for="register-comprador-button">
+                <input class="register-comprador-button" type="radio" name="user" id="register-comprador-button"/> 
+                Comprador
+              </label>
+              <label for="register-vendedor-button">
+                <input type="radio" name="user" id="register-vendedor-button"/> 
+                Vendedor
+              </label>
+
+            <h3 class="register-subtitle">Intereses</h3>
+
+              <label for="register-interests-electro">
+                <input class="register-interests-input" type="checkbox" name="Intereses" id="register-interests-electro" /> 
+                Electro
+              </label>
+              <label for="register-interests-moda">
+                <input class="register-interests-input" type="checkbox" name="Intereses" id="register-interests-moda" /> 
+                Moda
+              </label>
+              <label for="register-interests-hogar">
+                <input class="register-interests-input" type="checkbox" name="Intereses" id="register-interests-hogar" /> 
+                Hogar
+              </label>
+              <label for="register-interests-jugueteria">
+                <input class="register-interests-input" type="checkbox" name="Intereses" id="register-interests-jugueteria" /> 
+                Juguetería
+              </label>
+              <label for="register-interests-vida">
+                <input class="register-interests-input" type="checkbox" name="Intereses" id="register-interests-vida" /> 
+                Vida sana
+              </label>
+            
+            <section class="register-section">
+              <h3 class="register-subtitle">Foto de perfil</h3>
+              <input type="file" name="fileToUpload" id="fileToUpload" class="register-upload">
+            </section>
+            
+            <section class="register-section">
+              <h3 class="register-subtitle">Nombre de usuario</h3>
+              <input type="text" name="username" placeholder="Nombre de usuario" minlength="8"/>
+              <h3 class="register-subtitle">Contraseña</h3>
+              <input type="password" name="password" id="password" placeholder="Contraseña" minlength="8">
+              <h3 class="register-subtitle">Confirmar contraseña</h3>
+              <input type="password" name="password" id="password" placeholder="Confirmar contraseña" minlength="8">
+            </section>
+
+            <div class="register-buttons-container">
+              <a href="/"><input class="form-submit" type="submit"></a>
+              <input type="reset" class="form-submit" name="reset" value="Restablecer">  
+            </div>
+            
+
+          </form>
+        </article> 
+      </section>
     </main>
     <%- include('./partials/footer') %>    
   </body>

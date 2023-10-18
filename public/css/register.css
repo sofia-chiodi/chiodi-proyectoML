@@ -1,0 +1,203 @@
+body {
+  font-size: 12px;
+  background-color: #ebebeb;
+}
+
+.register-container {
+  width: 90vw;
+  padding: 30px 0;
+  margin: auto;
+}
+
+.form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4vw;
+  border-radius: 10px;
+  border: 1px solid rgba (0, 0, 0, 0.1);
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-container h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.register-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.register-upload {
+  font-size: 16px;
+}
+
+.register-details-container h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.register-user-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+.register-comprador-button {
+  margin-right: 15px;
+}
+
+.register-vendedor-button {
+  margin-left: 25px;
+  margin-right: 15px;
+}
+
+.register-interests-container {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  gap: 5vw;
+  margin-left: 20px;
+}
+
+.register-interests-input {
+  margin-right: 15px;
+}
+
+.register-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4vw;
+}
+
+.form-submit {
+  background-color: #1259c3;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  width: 120px;
+  border: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.register-reset {
+  background-color: #1259c3;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  width: 120px;
+  border: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.register-buttons-container {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Fonts */
+.font-titles {
+  font-size: 24px;
+}
+.font-footer {
+  font-size: 14px;
+}
+.font-text {
+  font-size: 16px;
+}
+.font-xl {
+  font-size: 18px;
+}
+.font-em {
+  font-size: 2em;
+}
+
+@media (min-width: 768px) {
+  /* TABLET */
+  .basic-info-input {
+    padding: 10px;
+  }
+  .register-form {
+    width: 70%;
+  }
+  .register-title {
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* LAPTOP */
+  .register-form {
+    width: 50%;
+  }
+  .basic-info-input {
+    padding: 10px;
+  }
+  .register-title {
+    margin-top: 40px;
+    font-size: 30px;
+  }
+  .register-subtitle {
+    font-size: 22px;
+  }
+  .register-user-container {
+    font-size: 18px;
+  }
+  .register-interests-container {
+    font-size: 18px;
+  }
+  .register-submit {
+    font-size: 18px;
+  }
+  .register-reset {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1025px) {
+  /* DESKTOP */
+  .basic-info-input {
+    padding: 10px;
+  }
+  .register-form {
+    width: 50%;
+  }
+  .register-title {
+    font-size: 30px;
+  }
+  .register-subtitle {
+    font-size: 20px;
+  }
+  .register-user-container {
+    font-size: 20px;
+  }
+  .register-interests-container {
+    font-size: 20px;
+  }
+  .register-submit {
+    font-size: 20px;
+    width: 150px;
+  }
+  .register-reset {
+    font-size: 20px;
+    width: 150px;
+  }
+}
