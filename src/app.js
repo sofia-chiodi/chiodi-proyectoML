@@ -7,6 +7,7 @@ const app = express();
 
 // Middlewares
 app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.urlencoded({ extended: false }));
 
 // Template engines
 app.set('view engine', 'ejs');

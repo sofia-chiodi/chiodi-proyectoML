@@ -16,7 +16,7 @@
         </article>
 
         <article class="form-container">
-          <form action="/users/register" method="post">
+          <form action="/users/register" method="post" enctype="multipart/form-data">
 
               <h3 class="register-subtitle">Datos personales</h3>
               
@@ -68,17 +68,17 @@
               </label>
             
             <section class="register-section">
-              <h3 class="register-subtitle">Foto de perfil</h3>
-              <input type="file" name="fileToUpload" id="fileToUpload" class="register-upload">
-            </section>
-            
-            <section class="register-section">
               <h3 class="register-subtitle">Nombre de usuario</h3>
               <input type="text" name="username" placeholder="Nombre de usuario" minlength="8"/>
               <h3 class="register-subtitle">Contraseña</h3>
               <input type="password" name="password" id="password" placeholder="Contraseña" minlength="8">
               <h3 class="register-subtitle">Confirmar contraseña</h3>
               <input type="password" name="password" id="password" placeholder="Confirmar contraseña" minlength="8">
+            </section>
+
+            <section class="register-section">
+              <h3 class="register-subtitle">Foto de perfil</h3>
+              <input type="file" name="profilePicture" class="register-upload" accept=".jpg">
             </section>
 
             <div class="register-buttons-container">
