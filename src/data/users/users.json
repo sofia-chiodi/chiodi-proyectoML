@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "fullName": "Taylor Swift",
+    "email": "taylor@swift.com",
+    "address": "Cornelia Street 1989",
+    "birthDate": "1989-12-13",
+    "userType": "Vendedor",
+    "interests": "Moda",
+    "username": "Taylor13",
+    "password": "Taytay1989",
+    "confirmPassword": "Taytay1989",
+    "profilePicture": "profilePicture-1697665895433.jpg"
+  }
+]

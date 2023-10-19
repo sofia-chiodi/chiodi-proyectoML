@@ -20,73 +20,102 @@
 
               <h3 class="register-subtitle">Datos personales</h3>
               
-              <input type="text" name="name" placeholder="Nombre completo"/>
-              
-              <input type="email" name="email" placeholder="E-mail"/>
+              <input type="text" name="fullName" id="fullName" placeholder="Nombre completo" value="<%= locals.oldData ? oldData.fullName : "" %>" />
+              <% if (locals.errors && errors.fullName) { %>
+                <div class="errors-msg">
+                <%= errors.fullName.msg %>
+                </div>
+              <% } %>
 
-              <input type="text" name="address" placeholder="Domicilio" minlength="8"/>
-
+              <input type="email" name="email" placeholder="E-mail" value="<%= locals.oldData ? oldData.email : "" %>" value="<%= locals.oldData ? oldData.email : "" %>" />
+              <% if (locals.errors && errors.email) { %>
+                <div class="errors-msg">
+                <%= errors.email.msg %>
+                </div>           
+              <% } %>
+              <input type="text" name="address" placeholder="Domicilio" value="<%= locals.oldData ? oldData.address : "" %>"/>
+              <% if (locals.errors && errors.address) { %>
+                <div class="errors-msg">
+                <%= errors.address.msg %>
+                </div>            
+              <% } %>
               <label for="birthDate">Fecha de nacimiento</label>
-              <input type="date" name="birthDate"/>
-
+              <input type="date" name="birthDate" value="<%= locals.oldData ? oldData.birthDate : "" %>"/>
+              <% if (locals.errors && errors.birthDate) { %>
+                <div class="errors-msg">
+                <%= errors.birthDate.msg %>
+                </div>           
+              <% } %>
               
-              <div class="register-details-container">
-              
-              
-            <h3 class="register-subtitle">Perfil de usuario</h3>
+              <section class="register-details-container">
             
-              <label for="register-comprador-button">
-                <input class="register-comprador-button" type="radio" name="user" id="register-comprador-button"/> 
-                Comprador
-              </label>
-              <label for="register-vendedor-button">
-                <input type="radio" name="user" id="register-vendedor-button"/> 
+                <h3>Perfil de usuario </h3>
+                <input class="register-comprador-button" type="radio" name="userType"/> 
+                Comprador           
+                <input type="radio" class="register-vendedor-button" name="userType"/> 
                 Vendedor
-              </label>
+                
+                <h3>Intereses</h3>
 
-            <h3 class="register-subtitle">Intereses</h3>
-
-              <label for="register-interests-electro">
-                <input class="register-interests-input" type="checkbox" name="Intereses" id="register-interests-electro" /> 
+                <input class="register-interests-input" type="checkbox" name="interests" /> 
                 Electro
-              </label>
-              <label for="register-interests-moda">
-                <input class="register-interests-input" type="checkbox" name="Intereses" id="register-interests-moda" /> 
+               
+                <input class="register-interests-input" type="checkbox" name="interests"/> 
                 Moda
-              </label>
-              <label for="register-interests-hogar">
-                <input class="register-interests-input" type="checkbox" name="Intereses" id="register-interests-hogar" /> 
+                            
+                <input class="register-interests-input" type="checkbox" name="interests" /> 
                 Hogar
-              </label>
-              <label for="register-interests-jugueteria">
-                <input class="register-interests-input" type="checkbox" name="Intereses" id="register-interests-jugueteria" /> 
+              
+                <input class="register-interests-input" type="checkbox" name="interests"/> 
                 Juguetería
-              </label>
-              <label for="register-interests-vida">
-                <input class="register-interests-input" type="checkbox" name="Intereses" id="register-interests-vida" /> 
+              
+                <input class="register-interests-input" type="checkbox" name="interests" /> 
                 Vida sana
-              </label>
-            
-            <section class="register-section">
-              <h3 class="register-subtitle">Nombre de usuario</h3>
-              <input type="text" name="username" placeholder="Nombre de usuario" minlength="8"/>
-              <h3 class="register-subtitle">Contraseña</h3>
-              <input type="password" name="password" id="password" placeholder="Contraseña" minlength="8">
-              <h3 class="register-subtitle">Confirmar contraseña</h3>
-              <input type="password" name="password" id="password" placeholder="Confirmar contraseña" minlength="8">
-            </section>
+              </section>
+
+              <section class="register-section">
+                <h3>Nombre de usuario</h3>
+                
+                <input type="text" name="username" placeholder="Nombre de usuario" value="<%= locals.oldData ? oldData.username : "" %>"/>
+
+                <% if (locals.errors && errors.username) { %>
+                  <div class="errors-msg">
+                    <%= errors.username.msg %>
+                  </div>         
+                <% } %>
+
+                <h3>Contraseña</h3>
+              
+                <input type="password" name="password" placeholder="Contraseña"/>
+                
+                <% if (locals.errors && errors.password) { %>
+                  <div class="errors-msg">
+                    <%= errors.password.msg %>
+                  </div>         
+                <% } %>
+                
+                <h3>Confirmar contraseña</h3>
+                
+                <input type="password" name="confirmPassword" placeholder="Confirmar contraseña" />
+                
+                <% if (locals.errors && errors.confirmPassword) { %>
+                  <div class="errors-msg">
+                    <%= errors.confirmPassword.msg %>
+                  </div>         
+                <% } %>      
+
+              </section>
 
             <section class="register-section">
-              <h3 class="register-subtitle">Foto de perfil</h3>
+              <h3>Foto de perfil</h3>
+
               <input type="file" name="profilePicture" class="register-upload" accept=".jpg">
             </section>
 
             <div class="register-buttons-container">
-              <a href="/"><input class="form-submit" type="submit"></a>
-              <input type="reset" class="form-submit" name="reset" value="Restablecer">  
+              <button type="submit" class="form-submit" name="submit">Enviar</button>
+              <button type="reset" class="form-submit" name="reset">Restablecer</button>  
             </div>
-            
-
           </form>
         </article> 
       </section>

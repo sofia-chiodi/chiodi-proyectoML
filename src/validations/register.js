@@ -1,12 +1,6 @@
-const express = require('express');
-const upload = require('../middlewares/users-multer');
-
 const { body } = require('express-validator');
 
-const usersRouter = express.Router();
-const usersController = require('../controllers/usersController');
-
-const validations = [
+module.exports = [
   body('fullName').notEmpty().withMessage('Ingresá tu nombre'),
   body('email')
     .notEmpty()
@@ -35,18 +29,3 @@ const validations = [
     .isLength({ min: 8 })
     .withMessage('La contraseña debe tener al menos 8 caracteres'),
 ];
-
-/* Login */
-usersRouter.get('/login', usersController.loginForm);
-usersRouter.post('/login', usersController.loginForm);
-
-/* Register*/
-usersRouter.get('/register', usersController.registerForm);
-usersRouter.post(
-  '/register',
-  upload.single('profilePicture'),
-  validations,
-  usersController.register
-);
-
-module.exports = usersRouter;

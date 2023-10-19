@@ -4,7 +4,7 @@ body {
 }
 
 .register-container {
-  width: 90vw;
+  width: 80%;
   padding: 30px 0;
   margin: auto;
 }
@@ -13,7 +13,6 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 4vw;
   border-radius: 10px;
   border: 1px solid rgba (0, 0, 0, 0.1);
 }
@@ -68,7 +67,7 @@ body {
   display: flex;
   flex-direction: column;
   font-size: 16px;
-  gap: 5vw;
+  gap: 20px;
   margin-left: 20px;
 }
 
@@ -79,7 +78,7 @@ body {
 .register-section {
   display: flex;
   flex-direction: column;
-  gap: 4vw;
+  gap: 20px;
 }
 
 .form-submit {
@@ -113,21 +112,10 @@ body {
   justify-content: space-evenly;
 }
 
-/* Fonts */
-.font-titles {
-  font-size: 24px;
-}
-.font-footer {
-  font-size: 14px;
-}
-.font-text {
-  font-size: 16px;
-}
-.font-xl {
-  font-size: 18px;
-}
-.font-em {
-  font-size: 2em;
+/* Errors */
+
+.errors-msg {
+  color: darkred;
 }
 
 @media (min-width: 768px) {
@@ -136,7 +124,7 @@ body {
     padding: 10px;
   }
   .register-form {
-    width: 70%;
+    width: 60%;
   }
   .register-title {
     margin-top: 30px;
