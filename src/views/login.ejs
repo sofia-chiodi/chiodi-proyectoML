@@ -13,8 +13,9 @@
             type="text"
             name="username"
             placeholder="Nombre de usuario"
+            value="<%= oldData ? oldData.username : "" %>"
           />
-            <% if (locals.errors && errors.username) { %>
+            <% if (errors && errors.username) { %>
               <div class="flash-errors"><%= errors.username.msg %></div>             
             <% } %>
 
@@ -25,14 +26,12 @@
             id="password"
             placeholder="Contraseña"
           />
-            <% if (locals.errors && errors.password) { %>
+            <% if (errors && errors.password) { %>
               <div class="flash-errors"><%= errors.password.msg %></div>             
             <% } %>          
         </div>
         <div class="login-submit-container">
-          <a href="/"
-            ><input class="form-submit" type="submit" value="Ingresar"
-          /></a>
+          <button type="submit" class="form-submit">Ingresar</button>
         </div>
       </form>
     </main>
