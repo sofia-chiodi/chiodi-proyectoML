@@ -12,7 +12,6 @@ const usersController = {
       errors: errors ? errors : null,
       oldData: oldData ? oldData : null,
     });
-    return res.render('register');
   },
   register: (req, res) => {
     const resultValidation = validationResult(req);
@@ -35,9 +34,12 @@ const usersController = {
       username: data.username,
       password: bcrypt.hashSync(data.password, 10),
       confirmPassword: data.confirmPassword,
-      profilePicture: req.file ? req.file : 'default-profile-picture.png',
+      profilePicture: req.file
+        ? req.file.filename
+        : 'default-profile-picture.png',
     };
     userServices.createUser(user);
+    res.redirect('login');
   },
   loginForm: (req, res) => {
     const errors = req.session.errors;

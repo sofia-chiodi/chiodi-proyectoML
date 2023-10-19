@@ -25,7 +25,7 @@ module.exports = {
     return userByField;
   },
   create: function (user) {
-    console.log(`Creating user ${user.email}`);
+    console.log(`Creating user ${user.username}`);
     const users = this.getUsers();
     const newUser = {
       id: uuidv4(),
