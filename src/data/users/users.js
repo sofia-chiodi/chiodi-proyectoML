@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { v4: uuidv4 } = require('uuid');
 
 module.exports = {
   getUsers: function () {
@@ -13,5 +14,24 @@ module.exports = {
   },
   findAll: function () {
     return this.getUsers();
+  },
+  findById: function (id) {
+    const user = this.getUsers().find((user) => user.id == id);
+    return user;
+  },
+  findByField: function (field, text) {
+    const users = this.getUsers();
+    const userByField = users.find((user) => user[field] == text);
+    return userByField;
+  },
+  create: function (user) {
+    console.log(`Creating user ${user.email}`);
+    const users = this.getUsers();
+    const newUser = {
+      id: uuidv4(),
+      ...user,
+    };
+    users.push(newUser);
+    this.saveUsers(users);
   },
 };

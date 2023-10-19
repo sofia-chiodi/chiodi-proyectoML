@@ -14,3 +14,5 @@ const userServices = {
     db.users.delete(id);
   },
 };
+
+module.exports = userServices;

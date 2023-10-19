@@ -5,7 +5,7 @@
     <%- include('./partials/header') %>
 
     <main class="main-login">
-      <form action="/" class="login-form">
+      <form action="/users/login" method="post" class="login-form">
         <div class="login-container">
           <h2 class="login-title">Ingresá a tu usuario</h2>
           <input
@@ -13,16 +13,21 @@
             type="text"
             name="username"
             placeholder="Nombre de usuario"
-            minlength="8"
           />
+            <% if (locals.errors && errors.username) { %>
+              <div class="flash-errors"><%= errors.username.msg %></div>             
+            <% } %>
+
           <input
             class="form-info-input"
             type="password"
             name="password"
             id="password"
             placeholder="Contraseña"
-            minlength="8"
           />
+            <% if (locals.errors && errors.password) { %>
+              <div class="flash-errors"><%= errors.password.msg %></div>             
+            <% } %>          
         </div>
         <div class="login-submit-container">
           <a href="/"

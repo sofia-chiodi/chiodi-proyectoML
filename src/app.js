@@ -1,6 +1,7 @@
 // Require's
 const express = require('express');
 const path = require('path');
+const session = require('express-session');
 
 // Ejecucion de express
 const app = express();
@@ -8,6 +9,13 @@ const app = express();
 // Middlewares
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.urlencoded({ extended: false }));
+app.use(
+  session({
+    secret: 'Mercado Liebre',
+    resave: false,
+    saveUninitialized: false,
+  })
+);
 
 // Template engines
 app.set('view engine', 'ejs');

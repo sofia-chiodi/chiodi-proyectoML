@@ -1,7 +1,17 @@
+const userServices = require('../services/userServices');
+const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
 
 const usersController = {
   registerForm: (req, res) => {
+    const errors = req.session.errors;
+    const oldData = req.session.oldData;
+    req.session.oldData = null;
+    req.session.oldData = null;
+    res.render('register', {
+      errors: errors ? errors : null,
+      oldData: oldData ? oldData : null,
+    });
     return res.render('register');
   },
   register: (req, res) => {
@@ -13,12 +23,36 @@ const usersController = {
         oldData: req.body,
       });
     }
+
+    const data = req.body;
+    const user = {
+      fullName: data.fullName,
+      email: data.email,
+      address: data.address,
+      birthDate: data.birthDate,
+      userType: data.userType,
+      interests: data.interests,
+      username: data.username,
+      password: bcrypt.hashSync(data.password, 10),
+      confirmPassword: data.confirmPassword,
+      profilePicture: req.file ? req.file : 'default-profile-picture.png',
+    };
+    userServices.createUser(user);
   },
   loginForm: (req, res) => {
-    return res.render('login');
+    const errors = req.session.errors;
+    const oldData = req.session.oldData;
+    req.session.errors = null;
+    req.session.oldData = null;
+    res.render('login', {
+      errors: errors ? errors : null,
+      oldData: oldData ? oldData : null,
+    });
   },
   login: (req, res) => {
-    return res.redirect('/');
+    const data = req.body;
+    req.session.userData = data;
+    res.redirect('/');
   },
 };
 
