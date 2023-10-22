@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('./partials/head') %>
+  <body>
+    <%- include('./partials/header') %>
+    <main>
+        Perfil del usuario: <%= user.username %>
+        <div>Foto de perfil: <img src="/images/users/<%= user.profilePicture %>" alt="Foto de perfil"> </div>
+    </main>
+    <%- include('./partials/footer') %>
+</body>
+</html>

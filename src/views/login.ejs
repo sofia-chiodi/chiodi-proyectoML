@@ -13,9 +13,8 @@
             type="text"
             name="username"
             placeholder="Nombre de usuario"
-            value="<%= oldData ? oldData.username : "" %>"
           />
-            <% if (errors && errors.username) { %>
+            <% if (locals.errors && errors.username) { %>
               <div class="flash-errors"><%= errors.username.msg %></div>             
             <% } %>
 
@@ -26,7 +25,7 @@
             id="password"
             placeholder="Contraseña"
           />
-            <% if (errors && errors.password) { %>
+            <% if (locals.errors && errors.password) { %>
               <div class="flash-errors"><%= errors.password.msg %></div>             
             <% } %>          
         </div>

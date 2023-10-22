@@ -3,6 +3,7 @@ const express = require('express');
 const usersRouter = express.Router();
 const usersController = require('../controllers/usersController');
 const upload = require('../middlewares/users-multer');
+const guestMiddleware = require('../middlewares/guestMiddleware');
 
 const { body } = require('express-validator');
 const path = require('path');
@@ -62,17 +63,19 @@ const loginValidations = [
     .withMessage('La contraseña debe tener al menos 8 caracteres'),
 ];
 
-/* Login */
-usersRouter.get('/login', usersController.loginForm);
-usersRouter.post('/login', loginValidations, usersController.login);
-
 /* Register*/
-usersRouter.get('/register', usersController.registerForm);
+usersRouter.get('/register', guestMiddleware, usersController.registerForm);
 usersRouter.post(
   '/register',
   upload.single('profilePicture'),
   registerValidations,
   usersController.register
 );
+
+/* Login */
+usersRouter.get('/login', guestMiddleware, usersController.loginForm);
+usersRouter.post('/login', loginValidations, usersController.login);
+
+usersRouter.get('/profile', usersController.profile);
 
 module.exports = usersRouter;

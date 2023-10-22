@@ -1,15 +1,13 @@
 [
   {
-    "id": 1,
+    "id": "cd6ff724-0d16-4916-a110-40eff9f90e1b",
     "fullName": "Taylor Swift",
-    "email": "taylor@swift.com",
+    "email": "taytay@swift.com",
     "address": "Cornelia Street 1989",
-    "birthDate": "13-12-1989",
-    "userType": "Vendedor",
-    "interests": "Moda",
-    "username": "Taylor13",
-    "password": "Taytay1989",
-    "confirmPassword": "Taytay1989",
-    "profilePicture": "default-profile.png"
+    "birthDate": "1989-12-13",
+    "username": "Taylor1989",
+    "password": "$2a$10$gH5ZNzpP5GdEMjldMRtGs.JGDvvJ5HhuujdKwhCbUg8sppHx2pK0y",
+    "confirmPassword": "123456789",
+    "profilePicture": "profilePicture-1698010314614.jpg"
   }
 ]

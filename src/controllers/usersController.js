@@ -38,23 +38,63 @@ const usersController = {
         ? req.file.filename
         : 'default-profile-picture.png',
     };
+    const userInDB = userServices.getUserByField('username', req.body.username);
+
+    if (userInDB) {
+      return res.render('register', {
+        errors: {
+          username: {
+            msg: 'Este usuario ya se encuentra registrado',
+          },
+        },
+        oldData: req.body,
+      });
+    }
+
     userServices.createUser(user);
     res.redirect('login');
   },
   loginForm: (req, res) => {
-    const errors = req.session.errors;
-    const oldData = req.session.oldData;
-    req.session.errors = null;
-    req.session.oldData = null;
-    res.render('login', {
-      errors: errors ? errors : null,
-      oldData: oldData ? oldData : null,
-    });
+    return res.render('login');
   },
   login: (req, res) => {
-    const data = req.body;
-    req.session.userData = data;
-    res.redirect('/');
+    const userToLogin = userServices.getUserByField(
+      'username',
+      req.body.username
+    );
+
+    if (userToLogin) {
+      const validPassword = bcrypt.compareSync(
+        req.body.password,
+        userToLogin.password
+      );
+      if (validPassword) {
+        delete userToLogin.password;
+        delete userToLogin.confirmPassword;
+        req.session.userLogged = userToLogin;
+        return res.redirect('/users/profile');
+      }
+      return res.render('login', {
+        errors: {
+          password: {
+            msg: 'El usuario y/o contraseña ingresados son inválidos',
+          },
+        },
+      });
+    }
+
+    return res.render('login', {
+      errors: {
+        username: {
+          msg: 'Nombre de usuario incorrecto',
+        },
+      },
+    });
+  },
+  profile: (req, res) => {
+    res.render('profile', {
+      user: req.session.userLogged,
+    });
   },
 };
 
