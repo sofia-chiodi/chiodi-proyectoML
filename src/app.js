@@ -2,6 +2,7 @@
 const express = require('express');
 const path = require('path');
 const session = require('express-session');
+const userLogged = require('./middlewares/userLogged');
 
 // Ejecucion de express
 const app = express();
@@ -16,6 +17,7 @@ app.use(
     saveUninitialized: false,
   })
 );
+app.use(userLogged);
 
 // Template engines
 app.set('view engine', 'ejs');

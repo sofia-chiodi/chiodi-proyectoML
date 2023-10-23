@@ -4,8 +4,9 @@
   <body>
     <%- include('./partials/header') %>
     <main>
-        Perfil del usuario: <%= user.username %>
+        Hello <%= user.username %>
         <div>Foto de perfil: <img src="/images/users/<%= user.profilePicture %>" alt="Foto de perfil"> </div>
+        Cerrar sesión: <a href="/users/logout">Salir</a>
     </main>
     <%- include('./partials/footer') %>
 </body>

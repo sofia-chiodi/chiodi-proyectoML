@@ -9,5 +9,18 @@
     "password": "$2a$10$gH5ZNzpP5GdEMjldMRtGs.JGDvvJ5HhuujdKwhCbUg8sppHx2pK0y",
     "confirmPassword": "123456789",
     "profilePicture": "profilePicture-1698010314614.jpg"
+  },
+  {
+    "id": "c3d45739-9dac-414b-ac30-6f3f5afc7dcd",
+    "fullName": "Conejo",
+    "email": "conejito@conecueva.com",
+    "address": "Conellanos 123",
+    "birthDate": "2022-02-14",
+    "userType": "on",
+    "interests": "on",
+    "username": "Coneji",
+    "password": "$2a$10$he6ob9Lg1matZCtO.mLVdOOzeNDsnVIVNke1iGySqCE9RuGaeIo76",
+    "confirmPassword": "123456789",
+    "profilePicture": "profilePicture-1698093615448.jpg"
   }
 ]

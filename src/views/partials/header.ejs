@@ -30,15 +30,19 @@
       <li class="nav-li-sites"><a href="#">Ayuda</a></li>
     </ul>
     <ul class="nav-ul-user">
-      <li class="nav-li-user">
-        <a href="/users/register"
-          >Creá tu cuenta <i class="fa-regular fa-id-card"></i
-        ></a>
-      </li>
-      <li class="nav-li-user">
-        <a href="/users/login"
-          >Ingresá <i class="fa-solid fa-right-to-bracket"></i
-        ></a>
+        <% if (locals.isLogged) { %>
+          <li class="nav-li-user">
+          <a href="/users/profile">Mi perfil <i class="fa-solid fa-user"></i></a></li>
+        <% } else { %>
+            <li class="nav-li-user">
+              <a href="/users/register">Creá tu cuenta 
+                <i class="fa-regular fa-id-card"></i></a>
+            </li>
+            <li class="nav-li-user">
+              <a href="/users/login">Ingresá 
+                <i class="fa-solid fa-right-to-bracket"></i></a>
+        <% } %>
+        
       </li>
       <li class="nav-li-user">
         <a href="#">Mis compras <i class="fa-solid fa-basket-shopping"></i></a>
