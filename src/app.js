@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 const session = require('express-session');
 const userLogged = require('./middlewares/userLogged');
+const cookies = require('cookie-parser');
 
 // Ejecucion de express
 const app = express();
@@ -17,6 +18,7 @@ app.use(
     saveUninitialized: false,
   })
 );
+app.use(cookies());
 app.use(userLogged);
 
 // Template engines

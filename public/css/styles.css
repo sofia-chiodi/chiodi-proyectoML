@@ -194,6 +194,12 @@ nav ul li a {
   display: flex;
   justify-content: space-evenly;
 }
+
+.remember-me {
+  display: flex;
+  align-self: center;
+}
+
 .form-submit {
   background-color: #1259c3;
   color: white;
