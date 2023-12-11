@@ -1,0 +1,19 @@
+footer {
+  background-color: white;
+  margin-top: 20px;
+}
+.footer-container {
+  padding: 8px;
+}
+.footer-texts {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.footer-title {
+  font-size: 18px;
+  padding: 8px;
+}
+.footer-terms {
+  font-size: 16px;
+}
