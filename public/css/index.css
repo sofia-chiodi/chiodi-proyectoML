@@ -1,0 +1,28 @@
+.index-container {
+  width: 90vw;
+  padding: 8px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-products {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.featured-products-title {
+  font-size: 24px;
+  margin: 20px 0 20px 0;
+}
+
+.flash-errors {
+  color: darkred;
+}
+
+@media (min-width: 768px) {
+  .featured-products-title {
+    width: 100%;
+  }
+}

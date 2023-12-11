@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
-  <!-- Head -->
-  <%- include('./partials/head') %>
+  <head>
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/partials/card.css" />
+  </head>
+
   <body>
-    <!-- Header -->
     <%- include('./partials/header') %>
 
     <img
@@ -12,135 +15,28 @@
       alt="Promoción fiestas"
     />
 
-    <main class="main-home">
-      <section class="product-section">
-        <h2 class="product-section-title">Basado en tu última visita</h2>
-        <article class="product-card">
-          <img
-            class="product-img"
-            src="/images/img-cafetera-moulinex.jpg"
-            alt="Cafetera Moulinex"
-          />
-          <div class="product-descr-container">
-            <i class="fa-solid fa-truck truck-icon"></i>
-            <div class="product-descr">
-              <p class="product-price">$6.770</p>
-              <p class="product-disc">40% off</p>
-            </div>
-            <h3 class="product-title">Cafetera Moulinex</h3>
+    <main class="index-container">
+      <section class="featured-products">
+        <h2 class="featured-products-title">Basado en tu última visita</h2>  
+
+        <div class="card-container">
+          <% products.slice(0, 8).forEach(product => { %> 
+          <%- include('./partials/card.ejs', {product}) %> <% }) %>
           </div>
-        </article>
-        <article class="product-card">
-          <img
-            class="product-img"
-            src="images/img-macbook-pro-2019.jpg"
-            alt="MacBook Pro 2019"
-          />
-          <div class="product-descr-container">
-            <i class="fa-solid fa-truck truck-icon"></i>
-            <div class="product-descr">
-              <p class="product-price">$230.000</p>
-              <p class="product-disc">20% off</p>
-            </div>
-            <h3 class="product-title">MacBook Pro 2019</h3>
-          </div>
-        </article>
-        <article class="product-card">
-          <img
-            class="product-img"
-            src="images/img-samsung-galaxy-s10.jpg"
-            alt="Samsung Galaxy S10"
-          />
-          <div class="product-descr-container">
-            <i class="fa-solid fa-truck truck-icon"></i>
-            <div class="product-descr">
-              <p class="product-price">$70.500</p>
-              <p class="product-disc">10% off</p>
-            </div>
-            <h3 class="product-title">Samsung Galaxy S10</h3>
-          </div>
-        </article>
-        <article class="product-card">
-          <img
-            class="product-img"
-            src="images/img-tv-samsung-smart.jpg"
-            alt="SmartTv Samsung 43"
-          />
-          <div class="product-descr-container">
-            <i class="fa-solid fa-truck truck-icon"></i>
-            <div class="product-descr">
-              <p class="product-price">$23.200</p>
-              <p class="product-disc">5% off</p>
-            </div>
-            <h3 class="product-title">SmartTv Samsung 43"</h3>
-          </div>
-        </article>
       </section>
-      <section class="product-section">
-        <h2 class="product-section-title">Sección de Ofertas</h2>
-        <article class="product-card">
-          <img
-            class="product-img"
-            src="/images/img-cafetera-moulinex.jpg"
-            alt="Cafetera Moulinex"
-          />
-          <div class="product-descr-container">
-            <i class="fa-solid fa-truck truck-icon"></i>
-            <div class="product-descr">
-              <p class="product-price">$6.770</p>
-              <p class="product-disc">40% off</p>
-            </div>
-            <h3 class="product-title">Cafetera Moulinex</h3>
-          </div>
-        </article>
-        <article class="product-card">
-          <img
-            class="product-img"
-            src="images/img-macbook-pro-2019.jpg"
-            alt="MacBook Pro 2019"
-          />
-          <div class="product-descr-container">
-            <i class="fa-solid fa-truck truck-icon"></i>
-            <div class="product-descr">
-              <p class="product-price">$230.000</p>
-              <p class="product-disc">20% off</p>
-            </div>
-            <h3 class="product-title">MacBook Pro 2019</h3>
-          </div>
-        </article>
-        <article class="product-card">
-          <img
-            class="product-img"
-            src="images/img-samsung-galaxy-s10.jpg"
-            alt="Samsung Galaxy S10"
-          />
-          <div class="product-descr-container">
-            <i class="fa-solid fa-truck truck-icon"></i>
-            <div class="product-descr">
-              <p class="product-price">$70.500</p>
-              <p class="product-disc">10% off</p>
-            </div>
-            <h3 class="product-title">Samsung Galaxy S10</h3>
-          </div>
-        </article>
-        <article class="product-card">
-          <img
-            class="product-img"
-            src="images/img-tv-samsung-smart.jpg"
-            alt="SmartTv Samsung 43"
-          />
-          <div class="product-descr-container">
-            <i class="fa-solid fa-truck truck-icon"></i>
-            <div class="product-descr">
-              <p class="product-price">$23.200</p>
-              <p class="product-disc">5% off</p>
-            </div>
-            <h3 class="product-title">SmartTv Samsung 43"</h3>
-          </div>
-        </article>
+
+      <section class="featured-products">
+        <h2 class="featured-products-title">Sección de Ofertas</h2>
+
+        <div class="card-container">
+          <% products.slice(0, 8).forEach(product => { %> 
+          <%- include('./partials/card.ejs', {product}) %> 
+          <% }) %>
+        </div>
       </section>
+
     </main>
-    <!-- Footer -->
+
     <%- include('./partials/footer') %>
   </body>
 </html>

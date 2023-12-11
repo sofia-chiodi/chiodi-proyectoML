@@ -1,0 +1,16 @@
+<article class="product-card">
+  <div class="card-image">
+    <img
+    src="images/products/<%= product.productImage %>"
+    alt="<%= product.name %>>"
+    />
+  </div>
+          
+  <div class="card-description">
+    <i class="fa-solid fa-truck truck-icon"></i>
+      <p class="product-price"> <%= product.price %></p>
+      <p class="product-disc">20% off</p>
+    <h3 class="product-title"><%= product.name %></h3>
+  </div>
+  <button>Agregar al carrito</button>
+</article>

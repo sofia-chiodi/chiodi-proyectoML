@@ -1,0 +1,50 @@
+@media (min-width: 768px) {
+  .nav-ul-sites {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    margin-left: 2%;
+    font-size: 15px;
+  }
+  .nav-ul-user {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    font-size: 15px;
+  }
+  .nav-li-sites {
+    margin-right: 2%;
+  }
+  .nav-li-user {
+    margin-right: 2%;
+  }
+
+  .tablet-text {
+    font-size: 16px;
+  }
+  .burger-menu-container {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav-ul-sites {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    margin-left: 3%;
+    font-size: 17px;
+  }
+  .nav-ul-user {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    font-size: 17px;
+  }
+  nav ul li {
+    margin-right: 3%;
+  }
+  .burger-menu-container {
+    display: none;
+  }
+}

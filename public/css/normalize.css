@@ -5,6 +5,11 @@
   font-family: 'Roboto', sans-serif;
 }
 
+body {
+  font-size: 12px;
+  background-color: #ebebeb;
+}
+
 input {
   border: none;
   padding: 8px;
@@ -16,4 +21,8 @@ input {
 li {
   list-style: none;
   padding: 0;
+}
+
+button {
+  border: none;
 }

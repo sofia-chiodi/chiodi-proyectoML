@@ -1,6 +1,9 @@
+const productServices = require('../services/productServices');
+
 const mainController = {
   index: (req, res) => {
-    return res.render('home');
+    const products = productServices.getAllProducts();
+    return res.render('home', { products });
   },
 };
 
