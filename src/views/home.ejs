@@ -20,7 +20,7 @@
         <h2 class="featured-products-title">Basado en tu última visita</h2>  
 
         <div class="card-container">
-          <% products.slice(0, 8).forEach(product => { %> 
+          <% products.forEach(product => { %> 
           <%- include('./partials/card.ejs', {product}) %> <% }) %>
           </div>
       </section>
@@ -29,7 +29,7 @@
         <h2 class="featured-products-title">Sección de Ofertas</h2>
 
         <div class="card-container">
-          <% products.slice(0, 8).forEach(product => { %> 
+          <% products.forEach(product => { %> 
           <%- include('./partials/card.ejs', {product}) %> 
           <% }) %>
         </div>

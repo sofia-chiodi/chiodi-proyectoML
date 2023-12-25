@@ -1,20 +1,24 @@
 [
   {
+    "id": 1,
     "name": "MacBook Pro 2019",
     "productImage": "img-macbook-pro-2019.jpg",
     "price": 230000
   },
   {
+    "id": 2,
     "name": "Samsung Galaxy S10",
     "productImage": "img-samsung-galaxy-s10.jpg",
     "price": 70500
   },
   {
+    "id": 3,
     "name": "SmartTv Samsung 43",
     "productImage": "img-tv-samsung-smart.jpg",
     "price": 23200
   },
   {
+    "id": 4,
     "name": "Cafetera Moulinex",
     "productImage": "img-cafetera-moulinex.jpg",
     "price": 6770

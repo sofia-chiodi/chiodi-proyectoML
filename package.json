@@ -4,6 +4,7 @@
   "description": "Práctica Integradora",
   "main": "index.js",
   "scripts": {
+    "test": "jest",
     "start": "node src/app.js",
     "dev": "nodemon -e js src/app.js"
   },
@@ -24,6 +25,7 @@
     "uuid": "^9.0.1"
   },
   "devDependencies": {
+    "jest": "^29.7.0",
     "nodemon": "^3.0.1"
   }
 }
